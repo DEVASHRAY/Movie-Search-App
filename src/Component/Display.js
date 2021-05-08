@@ -1,4 +1,4 @@
-import React , {useState} from "react"
+import React , {useState , useEffect} from "react"
 import MovieCards from "./MovieCard";
 import NoResult from "./NoData.js";
 
@@ -6,6 +6,12 @@ const Display = (props) => {
     const {searchMovie} = props;
     const [movies, setMovies] = useState([]);
 
+
+        useEffect(() => {
+            if(searchMovie.length > 0){
+                search();
+            }
+        }, [searchMovie])
     
     const search = async (e) => {
         
@@ -17,13 +23,12 @@ const Display = (props) => {
           const data = await res.json();
           setMovies(data.results);
         } catch (err) {
-          console.log(err);
+            console.log("ERR");
         }
       };
+      console.log(search);
 
-      if(searchMovie.length > 0){
-        search();
-    }
+
 
     return(
         <>
@@ -34,7 +39,7 @@ const Display = (props) => {
           .map((movie) => {
             return <MovieCards value={movie} key={movie.id} />;
           }))}
-        </div> : <NoResult/> }
+        </div> :  <p className = "context">Loading...</p> }
         
     </>)
       

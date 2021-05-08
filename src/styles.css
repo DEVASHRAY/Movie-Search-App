@@ -40,12 +40,12 @@ form{
 
 .input{
     font-size: 1.6rem;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 6rem;
     line-height: 2.8rem;
     border-radius: 20px;
     border: 1px solid #ddd;
     margin-bottom: 1rem;
-    padding-left: 6rem;
+    
 }
 .searchBtn{
     position: absolute;
