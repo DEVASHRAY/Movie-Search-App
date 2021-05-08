@@ -31,7 +31,7 @@ const SearchMovies = () => {
             onChange={(e) => {
               setQuery(e.target.value);
             }}
-            placeholder="Search a movie"
+            placeholder="Search your favourite movie"
           />
           <SearchIcon className="searchBtn" onClick={search}/>
           {query.length > 0 ? (
