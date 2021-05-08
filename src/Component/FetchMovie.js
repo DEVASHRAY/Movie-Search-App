@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import MovieCards from "./MovieCard";
-import NoResult from "./NoData.js";
+import NoDataIcon from "./NoDataIcon.js";
 
-const Display = (props) => {
-  const { searchMovie , clear } = props;
+const FetchMovie = (props) => {
+  const { searchMovie } = props;
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [notFound, setNoFound] = useState(false);
@@ -14,7 +14,6 @@ const Display = (props) => {
   //     }
   // } , [movies])
 
-  console.log(notFound);
   useEffect(() => {
     if (searchMovie.length > 0) {
       search();
@@ -47,7 +46,7 @@ const Display = (props) => {
       {searchMovie.length > 0 ? (
         <p className="context">{`Showing search results for "${searchMovie}"`}</p>
       ) : null}
-      {movies.length > 0 ? (
+      {movies.length > 0 && (
         <div className="card--list">
           {movies
             .filter((movie) => movie.poster_path)
@@ -55,13 +54,11 @@ const Display = (props) => {
               return <MovieCards value={movie} key={movie.id} />;
             })}
         </div>
-      ) : (
-        null
       )}
       {isLoading && <p className="context">Loading...</p>}
-      {notFound && <NoResult />}
+      {notFound && <NoDataIcon />}
     </>
   );
 };
 
-export default Display;
+export default FetchMovie;

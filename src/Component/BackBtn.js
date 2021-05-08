@@ -1,8 +1,7 @@
 import React from "react";
 
 const BackBtn = () => {
-
-/** Component returns backbutton and takes to the landing page when clicked  */
+  /** Component returns backbutton and takes to the landing page when clicked  */
 
   return (
     <div className="nodata">

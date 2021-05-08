@@ -1,10 +1,8 @@
-import React from "react"
-import SearchMovie from "./Component/SearchMovies"
+import React from "react";
+import HomePage from "./Component/HomePage";
 
 const App = () => {
-    return(
-        <SearchMovie/>
-    )
-}
+  return <HomePage />;
+};
 
 export default App;
