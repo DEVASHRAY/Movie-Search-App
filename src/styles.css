@@ -137,7 +137,12 @@ form{
     font-size: 3.2rem;
     color: #333;
  }
-
+.releaseDate .rating{
+    color: #8a8a8a;
+}
+.card--desc{
+    line-height: 1.57142857;
+}
  @media (min-width:786px){
     .form {
         grid-template-columns:  1fr ;

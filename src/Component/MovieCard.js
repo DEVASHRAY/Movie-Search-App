@@ -9,8 +9,8 @@ const MovieCards = (props) => {
                 alt = {props.value.title + "poster"} />
                 <div className="card--content">
                     <h3 className= "card--title">{props.value.title}</h3>
-                    <p><small><b>RELEASE DATE : </b>{props.value.release_date}</small></p>
-                    <p><small><b>RATING : </b>{props.value.vote_average}</small></p>
+                    <p ><small><b className = "releaseDate">RELEASE DATE : </b>{props.value.release_date}</small></p>
+                    <p ><small><b className = "rating">RATING : </b>{props.value.vote_average}</small></p>
                     <p className="card--desc"><b>DESCRIPTION : </b>{props.value.overview}</p>
                 </div>
                 
