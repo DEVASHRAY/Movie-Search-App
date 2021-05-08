@@ -7,7 +7,7 @@ const HomePageImg = () => {
         <>
         <div className = "HomePageImg">
         <img src = {NoData} alt = "No Movies Found.png" />
-        <BackBtn/>
+        <BackBtn />
         </div>
        
         </>

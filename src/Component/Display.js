@@ -27,7 +27,7 @@ const Display = (props) => {
 
     return(
         <>
-        {searchMovie.length > 0 ? <h3 className = "context">{`Showing search results for "${searchMovie}"`}</h3> : null }
+        {searchMovie.length > 0 ? <p className = "context">{`Showing search results for "${searchMovie}"`}</p> : null }
         {movies.length > 0 ? <div className = "card--list">
        { (movies
           .filter((movie) => movie.poster_path)
